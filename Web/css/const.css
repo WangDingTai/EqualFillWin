@@ -1,0 +1,272 @@
+:host,
+:root {
+
+  --DDT-Z-INDEX-MAX: 2147483647;
+
+  --DDT-Z-INDEX-SEARCHUI-0: calc(var(--DDT-Z-INDEX-MAX) - 10);
+  --DDT-Z-INDEX-SEARCHUI-1: calc(var(--DDT-Z-INDEX-MAX) - 11);
+  --DDT-Z-INDEX-AUTOPASTEITEM-0: calc(var(--DDT-Z-INDEX-MAX) - 20);
+  --DDT-Z-INDEX-EDITWEBTAG-0: calc(var(--DDT-Z-INDEX-MAX) - 30);
+  --DDT-Z-INDEX-MASK: calc(var(--DDT-Z-INDEX-MAX) - 40);
+
+  --DDT-Z-INDEX-MGR-0: calc(var(--DDT-Z-INDEX-MAX) - 100);
+  --DDT-Z-INDEX-MGR-1: calc(var(--DDT-Z-INDEX-MAX) - 101);
+  --DDT-Z-INDEX-MGR-2: calc(var(--DDT-Z-INDEX-MAX) - 102);
+  --DDT-Z-INDEX-MGR-3: calc(var(--DDT-Z-INDEX-MAX) - 103);
+  --DDT-Z-INDEX-MGR-4: calc(var(--DDT-Z-INDEX-MAX) - 104);
+  --DDT-Z-INDEX-MGR-5: calc(var(--DDT-Z-INDEX-MAX) - 105);
+  --DDT-Z-INDEX-MGR-6: calc(var(--DDT-Z-INDEX-MAX) - 106);
+  --DDT-Z-INDEX-MGR-7: calc(var(--DDT-Z-INDEX-MAX) - 107);
+  --DDT-Z-INDEX-MGR-8: calc(var(--DDT-Z-INDEX-MAX) - 108);
+  --DDT-Z-INDEX-MGR-9: calc(var(--DDT-Z-INDEX-MAX) - 109);
+
+  --DDT-SEARCHUI-BANNER-H: 36px;
+  --DDT-TAGITEM-W: 288px;
+  --DDT-TAGITEM-H: 44px;
+  --DDT-TAGITEM-UL-H: 180px;
+  --DDT-INPUTFIELD_W: 600px;
+  --DDT-INPUTFIELD_H: 300px;
+
+  --DDT-MGR-H: 600px;
+  --DDT-MGR-W: 350px;
+  --DDT-MGR-LOGO-H: 18px;
+  --DDT-MGR-SLOGAN-H: 35px;
+  --DDT-MGR-EDITTPLTAG_W: 580px;
+  --DDT-MGR-EDITTPLTAG_H: calc(calc(var(--DDT-MGR-H) - 164px) - var(--DDT-MGR-LOGO-H));
+  --DDT-MGRTIP-W: 48px;
+  --DDT-MGR-SHADOW-RADIUS: 16px;
+  --DDT-MGR-CONTENT-PADDING: 24px;
+
+  --DDT-FONT-FAMILY: "PingFang SC", Arial;
+  --DDT-FONT-SIZE-0: 12px;
+  --DDT-FONT-SIZE-1: 14px;
+  --DDT-FONT-SIZE-2: 15px;
+  --DDT-FONT-SIZE-3: 16px;
+  --DDT-FONT-SIZE: var(--DDT-FONT-SIZE-1);
+
+  --DDT-DEF-SEL-BK: #B3D7FC;
+
+  --DDT-BK-CLR-0: white;
+  --DDT-BK-CLR-1: var(--DDT-FG-CLR-1);
+  --DDT-BK-CLR-2: #F0F0F0;
+
+  --DDT-FG-CLR-0: white;
+  --DDT-FG-CLR-1: #F0F0F0;
+  --DDT-FG-CLR-2: #D0D0D0;
+  --DDT-FG-CLR-3: #B8B8B8;
+  --DDT-FG-CLR-7: #7E7E7E;
+  --DDT-FG-CLR-8: #5E5E5E;
+  --DDT-FG-CLR-9: #303030;
+
+  --DDT-ERR-CLR: #CC0000;
+
+  --DDT-MAIN-CLR-0: #F2F4FA;
+  --DDT-MAIN-CLR-1: #C7D3F1;
+  --DDT-MAIN-CLR-2: #B0B9E2;
+  --DDT-MAIN-CLR-7: #2323BE;
+  --DDT-MAIN-CLR-8: #1F1FAE;
+  --DDT-MAIN-CLR-9: #1A1A8C;
+  --DDT-SUB-CLR-0: #E6FFE3;
+  --DDT-SUB-CLR-1: #C8F9C4;
+  --DDT-SUB-CLR-2: #A6F0A1;
+  --DDT-SUB-CLR-7: #1E9C1E;
+  --DDT-SUB-CLR-9: #287728;
+}
+
+
+
+
+:host,
+:root {
+  --DDT-BTN-BDRW: 1px;
+  --DDT-ICONBTN-SIZE: 28px;
+}
+
+/*//////////////// Icon ////////////////*/
+
+:is(button).ddt_icon_btn {
+  width: var(--DDT-ICONBTN-SIZE);
+  height: var(--DDT-ICONBTN-SIZE);
+  line-height: 0;
+  border-radius: 28px;
+  padding: 4px;
+  border: none;
+
+  appearance: none;
+  cursor: pointer;
+
+  background: transparent;
+  fill: var(--DDT-FG-CLR-8);
+
+  box-sizing: border-box;
+}
+
+:is(button).ddt_icon_btn:is(:hover:not(:disabled)) {
+  background-color: var(--DDT-MAIN-CLR-1);
+  fill: var(--DDT-MAIN-CLR-7);
+}
+
+:is(button).ddt_icon_btn:hover:active {
+  background-color: var(--DDT-MAIN-CLR-2);
+  fill: var(--DDT-MAIN-CLR-7);
+}
+
+:is(button).ddt_icon_btn:is(:focus) {
+  outline: none;
+}
+
+/*//////////////// Common、Cancel ////////////////*/
+
+:is(button):is(.ddt_common_btn, .ddt_cancel_btn) {
+  cursor: pointer;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--DDT-FONT-FAMILY);
+  font-weight: bold;
+
+  margin: 8px 0;
+  border: var(--DDT-BTN-BDRW) solid;
+}
+
+:is(button).ddt_common_btn {
+  color: var(--DDT-FG-CLR-0);
+  background-color: var(--DDT-MAIN-CLR-7);
+  border-color: transparent;
+}
+
+:is(button).ddt_common_btn:is(:hover:not(:disabled)) {
+  background-color: var(--DDT-MAIN-CLR-8);
+}
+
+:is(button).ddt_common_btn:is(:focus),
+:is(button).ddt_common_btn:is(:hover:active:not(:disabled)) {  
+  background-color: var(--DDT-MAIN-CLR-9);
+}
+
+:is(button).ddt_cancel_btn {
+  background: transparent;
+  border-color: var(--DDT-MAIN-CLR-7);
+  color: var(--DDT-MAIN-CLR-7);
+}
+
+:is(button).ddt_cancel_btn:is(:hover:not(:disabled)) {
+  background-color: var(--DDT-MAIN-CLR-1);
+}
+
+:is(button).ddt_cancel_btn:is(:focus),
+:is(button).ddt_cancel_btn:hover:active {
+  background-color: var(--DDT-MAIN-CLR-2);
+}
+
+/*//////////////// disabled、shadow ////////////////*/
+
+:is(button):is(.ddt_common_btn, .ddt_cancel_btn, .ddt_icon_btn):disabled {
+  cursor: default;
+  background-color: var(--DDT-FG-CLR-2);
+}
+
+:is(button):is(.ddt_common_btn, .ddt_cancel_btn):is(:hover:not(:disabled)) {
+  box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.15), -2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*//////////////// Slim、Thick ////////////////*/
+
+:is(button).ddt_slim_btn {
+  border-radius: 24px;
+  font-size: var(--DDT-FONT-SIZE);
+  line-height: calc(20 / 14);
+  text-align: inherit;
+  padding: calc(2px - var(--DDT-BTN-BDRW)) 12px;
+  width: auto;
+  align-items: center;
+}
+
+:is(button).ddt_thick_btn {
+  border-radius: 18px;
+  font-size: var(--DDT-FONT-SIZE);
+  line-height: calc(20 / 14);
+  padding: calc(8px - var(--DDT-BTN-BDRW)) 18px;
+}
+
+/*//////////////// SVG ////////////////*/
+
+:is(button).ddt_slim_btn>svg {
+  margin-right: 6px;
+}
+
+:is(button).ddt_thick_btn>svg {
+  margin-right: 10px;
+}
+
+/*//////////////// Toggle ////////////////*/
+
+.ddt_toggle_label {
+  border: 1px solid var(--DDT-MAIN-CLR-7);
+  display: inline-block;
+  padding: 3px;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 150ms ease, color 100ms ease;
+}
+
+input[type=radio].ddt_toggle_input {
+  display: none;
+}
+
+input[type=radio].ddt_toggle_input+label {
+  cursor: pointer;
+  min-width: 55px;
+  color: var(--DDT-FG-CLR-3);
+}
+
+input[type=radio].ddt_toggle_input+label:hover {
+  background: none;
+  color: var(--DDT-MAIN-CLR-8);
+}
+
+input[type=radio].ddt_toggle_input+label:after {
+  background: var(--DDT-MAIN-CLR-9);
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: left 75ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 100%;
+  z-index: -1;
+}
+
+input[type=radio].ddt_toggle_input.ddt_toggle_input_left+label {
+  border-right: 0;
+  margin-right: -3px;
+}
+
+input[type=radio].ddt_toggle_input.ddt_toggle_input_left+label:after {
+  left: 100%;
+}
+
+input[type=radio].ddt_toggle_input.ddt_toggle_input_right+label {
+  border-left: 0;
+  margin-left: -3px;
+}
+
+input[type=radio].ddt_toggle_input.ddt_toggle_input_right+label:after {
+  left: -100%;
+}
+
+input[type=radio].ddt_toggle_input:checked+label {
+  cursor: default;
+  color: var(--DDT-FG-CLR-0);
+  transition: color 100ms;
+}
+
+input[type=radio].ddt_toggle_input:checked+label:after {
+  left: 0;
+}

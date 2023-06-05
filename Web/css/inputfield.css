@@ -1,0 +1,124 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    background: none transparent;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    color: var(--DDT-FG-CLR-9);
+    font-family: var(--DDT-FONT-FAMILY);
+    font-size: var(--DDT-FONT-SIZE);
+}
+
+#ddt_app_icon {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+
+.ddt_inputfield_win {
+    z-index: var(--DDT-Z-INDEX-SEARCHUI-1);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--DDT-BK-CLR-0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    outline: none;
+
+    font-family: var(--DDT-FONT-FAMILY);
+    font-size: var(--DDT-FONT-SIZE);
+}
+
+.ddt_inputfield_banner {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 10px 10px 0px 0px;
+    padding: 6px 16px;
+    background-color: var(--DDT-FG-CLR-1);
+}
+
+.ddt_inputfield_banner button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+.ddt_inputfield_banner span {
+    flex-grow: 1;
+    font-weight: bold;
+    color: var(--DDT-FG-CLR-7);
+    cursor: default;
+}
+
+.ddt_inputfield_win #ddt_inputfield_form {
+    padding: 16px;
+    padding-bottom: 68px;
+    margin-block-end: 0;
+    border-radius: 8px;
+}
+
+.ddt_inputfield_win #ddt_inputfield_form #ddt_inputfield_form_div {
+    width: var(--DDT-INPUTFIELD_W);
+    min-height: calc(var(--DDT-INPUTFIELD_H) / 1.5);
+    max-height: calc(var(--DDT-INPUTFIELD_H) * 1.5);
+    margin-bottom: 16px;
+
+    white-space: normal;
+    overflow-y: auto;
+}
+
+.ddt_inputfield_win #ddt_inputfield_form #ddt_inputfield_form_div #ddt_inputfield_pre {
+    font-family: var(--DDT-FONT-FAMILY);
+    font-size: var(--DDT-FONT-SIZE-2);
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.ddt_inputfield_span {
+    padding: 0px 2px;
+    margin: 0px 1px;
+    background-color: var(--DDT-MAIN-CLR-0);
+    outline: 1px solid var(--DDT-MAIN-CLR-7);
+    border-radius: 3px;
+    line-height: initial;
+}
+
+.ddt_inputfield_span:empty::before {
+    content: attr(text-placeholder);
+    color: var(--DDT-FG-CLR-2);
+}
+
+.ddt_inputfield_span:empty {
+    display: inline-block;
+}
+
+.ddt_inputfield_win form button {
+    width: calc(var(--DDT-INPUTFIELD_W) / 2.5);
+    position: absolute;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
